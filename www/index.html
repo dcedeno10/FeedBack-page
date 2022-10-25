@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+    <LINK REL="STYLESHEET" HREF="StyleSheets/output.css" text/css">
+	<script src="../node_modules/tw-elements/dist/js/index.min.js"></script>
+	<script
+		src='//fw-cdn.com/2135587/2840834.js'
+		chat='true'>
+</script>
+</head>
+
+<body>
+	
+	<div align="center">		
+		<table style="width: 700px;">
+			<tbody>
+				<tr style="height: 145px;">
+					<td style="padding: 0cm; height: 145px;"><img src="Assets/Images/Imagen1.png" alt="Emergencias Medicas" width="700" height="142"><br></td>
+				</tr>
+				<tr>
+					<td>
+						<table class="MsoNormalTable" style="width: 700px;">
+							<tbody>
+								<tr>
+									<td width="50" style="width: 37.5pt; padding: 0cm 0cm 0cm 0cm;">
+										<p class="MsoNormal"><span style="color: #606060;">&nbsp;</span></p>
+									</td>
+									<td>										
+										<p>Estimado(a) <strong><label id ="lbName"></label></strong></p>
+										<p>Reconocemos que este es un momento incierto para todos. Por ello, ahora m&aacute;s que nunca sus comentarios son importantes para nosotros.</p>
+										<p>Al responder esta pregunta, conoceremos su experiencia al usar nuestro servicio de <strong><label id ="lbService"></label></strong> (para <strong><label id ="lbUser"></label>) </strong>el <strong><label id ="lbfecha"></label></strong> (incidente <strong><label id="lbIncident"></label></strong>) y nos permitir&aacute; mejorar cada d&iacute;a m&aacute;s.</p>
+										<p>Este proceso le tomar&aacute; menos de 2 minutos.</span></p>
+										<p>&iquest;Qu&eacute; probabilidad hay de que recomiende nuestros servicios a los dem&aacute;s?</p>
+										
+										
+										<div class="container">
+											<ul class="numbers-icons">
+												<li>
+													<a id="number1" href="#" class="icons" onclick='setSelected(1)'>
+														<i class="">1</i>
+													</a>
+												</li>
+												<li>
+													<a id="number2" href="#" class="icons" onclick='setSelected(2)'>
+														<i class="">2</i>
+													</a>
+												</li>
+												<li>
+													<a id="number3" href="#" class="icons" onclick='setSelected(3)'>
+														<i class="">3</i>
+													</a>
+												</li>
+												<li>
+													<a id="number4" href="#" class="icons" onclick='setSelected(4)'>
+														<i class="">4</i>
+													</a>
+												</li>
+												<li>
+													<a id="number5" href="#" class="icons" onclick='setSelected(5)'>
+														<i class="">5</i>
+													</a>
+												</li>
+												<li>
+													<a id="number6" href="#" class="icons" onclick='setSelected(6)'>
+														<i class="">6</i>
+													</a>
+												</li>
+												<li>
+													<a id = "number7" href="#" class="icons" onclick='setSelected(7)'>
+														<i class="">7</i>
+													</a>
+												</li>
+												<li>
+													<a id="number8" href="#" class="icons" onclick='setSelected(8)'>
+														<i class="">8</i>
+													</a>
+												</li>
+												<li>
+													<a id="number9" href="#" class="icons" onclick='setSelected(9)'>
+														<i class="">9</i>
+													</a>
+												</li>
+												<li>
+													<a id ="number10" href="#" class="icons" onclick='setSelected(10)'>
+														<i class="">10</i>
+													</a>
+												</li>
+											</ul>
+										</div>								
+										
+										<table class="two-row-table" style="width: 600px;">
+											<tbody>
+												<tr>
+													<td style="width: 50%;"><span style="font-family: arial, 'helvetica neue', helvetica, sans-serif;"><img src="https://s7913139.sendpul.se/image/747991a0e145ac2bbe69f063a9402e69/files/emailservice/userfiles/c9ca477a65d2e2814f2512c03a0eea6c7913139/Imagen15.png" alt="Imagen15" width="22" height="2" style="float: left;"></span><br></td>
+													<td style="width: 50%; text-align: right;"><span style="font-family: arial, 'helvetica neue', helvetica, sans-serif;"><img src="https://s7913139.sendpul.se/image/747991a0e145ac2bbe69f063a9402e69/files/emailservice/userfiles/c9ca477a65d2e2814f2512c03a0eea6c7913139/Imagen15.png" alt="Imagen15" width="22" height="2" style="float: right;"></span><br></td>
+												</tr>
+												<tr>
+													<td style="text-align: left;"><span style="font-family: arial, 'helvetica neue', helvetica, sans-serif;">Poco probable</span></td>
+													<td style="text-align: right;"><span style="font-family: arial, 'helvetica neue', helvetica, sans-serif;">Muy probable</span></td>
+												</tr>
+											</tbody>
+										</table>
+										<form name="frmCustomersFeedback">
+										<div class="form-controls">
+												<input type="hidden" id="txtName" name="customer" value="" >
+												<input type="hidden" id="txtService" name="service" value="" >
+												<input type="hidden" id="txtUser" name="user" value="">
+												<input type="hidden" id="txtDate" name="date" value="" >
+												<input type="hidden" id="txtIncident" name="incident" value="" >
+												<input type="hidden" id="txtEmail" name="email" value="" >
+												<input type="hidden" id="txtRank" name="rank" value="" >
+												<label>Observaciones:</label>
+												<input type="text" id="txtObservation" class="form-control block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none" id="exampleFormControlInput1" placeholder="">
+												<button type="button" class="red-button inline-block px-6 py-2.5 bg-red-600 text-white font-medium text-xs leading-tight uppercase rounded-full shadow-md hover:bg-red-700 hover:shadow-lg focus:bg-red-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-red-800 active:shadow-lg transition duration-150 ease-in-out" onclick="RegisterEvent()">Enviar</button>				
+											
+										</div>
+										</form>
+									</td>
+									<td width="50" style="width: 37.5pt; padding: 0cm 0cm 0cm 0cm;">
+										<p class="MsoNormal"><span style="color: #606060;">&nbsp;</span></p>
+										<p><br></p>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+						
+					</td>
+				</tr>
+				<tr style="height: 13px;">
+					<td style="width: 700px; height: 13px; vertical-align: top;"><img src="https://s7913139.sendpul.se/image/747991a0e145ac2bbe69f063a9402e69/files/emailservice/userfiles/c9ca477a65d2e2814f2512c03a0eea6c7913139/Imagen17.png" alt="Imagen17" width="700" height="142"></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+	</body>
+    <script src="JavaScript/read_params.js"> </script>
+</html>

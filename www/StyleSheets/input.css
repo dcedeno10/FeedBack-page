@@ -1,0 +1,112 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;    
+    font-family: Poppins,Tahoma,Geneva, sans-serif;
+    line-height: 20px;
+    font-weight: 400;
+    font-style: normal;
+    color: #808080;
+    font-size: 16px;
+}
+body
+{
+    background-color: rgb(248, 248, 248);
+}
+p {
+margin: 0 0 10px
+}
+header
+{
+    background-color: darkblue;
+    width: 200vh;
+    height: 145px;
+}
+.container
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+.numbers-icons
+{
+    display: flex;
+}
+.numbers-icons li{
+    list-style-type: none;
+    margin:10px;
+   
+}
+.icons{
+    box-shadow: inset 0 0 15px rgba(55, 84,170,0),
+                inset 0 0 20px rgba(225, 225, 225, 0),
+                7px 7px 15px rgba(55, 84, 170, 0.15),
+                -7px -7px 20px rgba(255, 255, 255, 1),
+                inset 0 0 4px rgba(255,255,255,0.2);
+    height: 40px;
+    width: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 25px;
+    text-decoration: none;
+    border-radius:50% ;
+    color: rgb(94 94, 94);
+   
+}
+.numbers-icons li a:hover{
+    box-shadow: inset 7px 7px 15px rgba(55, 84, 170, 0.15),
+                inset 7px 7px 20px rgb(255, 255, 255,1),
+                0 0 4px rgba(255,255,255,0.2);
+
+
+
+}
+.selected
+{
+    height: 40px;
+    width: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 25px;
+    text-decoration: none;
+    border-radius:50% ;
+    color: rgb(94 94, 94);
+    box-shadow: inset 7px 7px 15px rgba(55, 84, 170, 0.15),
+                inset 7px 7px 20px rgb(255, 255, 255,1),
+                0 0 4px rgba(255,255,255,0.2);
+}
+#ex2 img:hover {
+
+    /*** aquí va la sombra ***/
+    -webkit-box-shadow: 0 0 5px #999;
+    -moz-box-shadow: 0 0 5px #999;
+    -ms-box-shadow: 0 0 5px #999;
+    box-shadow: 0 0 5px #999;
+}
+label{
+    color: #000000;
+}
+.two-row-table
+{
+    margin-bottom:  20px;
+}
+.form-controls
+{
+    display: flex;   
+    flex-direction: column;
+    align-items: flex-start;   
+    justify-content: space-around;
+    padding-bottom: 10px;
+    height: 150px;
+}
+.red-button
+{
+    align-self: center;
+}
