@@ -6,7 +6,8 @@ console.log(queryString);
 const urlParams = new URLSearchParams(queryString);
 
 //descodifica los parametos
-decode_queryString = Base64Decode(urlParams.get('nps'));
+decode_queryString = decode_utf8(atob(urlParams.get('nps')));
+
 
 const decode_urlParams = new URLSearchParams('?'+decode_queryString);
 //estable los valores en la pagina
@@ -25,35 +26,6 @@ SetTextBoxValue("txtEmail",decode_urlParams.get('email'));
 
 setSelected(urlParams.get('rank'));
 
-function Base64Decode(encoded) {
-   var keyStr = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/=";
-   var output = "";
-   var chr1, chr2, chr3;
-   var enc1, enc2, enc3, enc4;
-   var i = 0;
-
-   do {
-      enc1 = keyStr.indexOf(encoded.charAt(i++));
-      enc2 = keyStr.indexOf(encoded.charAt(i++));
-      enc3 = keyStr.indexOf(encoded.charAt(i++));
-      enc4 = keyStr.indexOf(encoded.charAt(i++));
-
-      chr1 = (enc1 << 2) | (enc2 >> 4);
-      chr2 = ((enc2 & 15) << 4) | (enc3 >> 2);
-      chr3 = ((enc3 & 3) << 6) | enc4;
-
-      output = output + String.fromCharCode(chr1);
-
-      if (enc3 != 64) {
-         output = output + String.fromCharCode(chr2);
-      }
-      if (enc4 != 64) {
-         output = output + String.fromCharCode(chr3);
-      }
-   } while (i < encoded.length);
-
-   return output;
-}
 function SetTextBoxValue(id, value)
 {
    const textbox = document.getElementById(id);
@@ -99,5 +71,36 @@ function setSelected(rank)
 
    SetTextBoxValue("txtRank",rank);
 }
+function decode_utf8(utftext) {
+   var string = "";
+   var i = 0;
+   var c = c1 = c2 = 0;
+
+   while ( i < utftext.length ) {
+
+      c = utftext.charCodeAt(i);
+
+      if (c < 128) {
+         string += String.fromCharCode(c);
+         i++;
+      }
+      else if((c > 191) && (c < 224)) {
+         c2 = utftext.charCodeAt(i+1);
+         string += String.fromCharCode(((c & 31) << 6) | (c2 & 63));
+         i += 2;
+      }
+      else {
+         c2 = utftext.charCodeAt(i+1);
+         c3 = utftext.charCodeAt(i+2);
+         string += String.fromCharCode(((c & 15) << 12) | ((c2 & 63) << 6) | (c3 & 63));
+         i += 3;
+      }
+
+   }
+
+   return string;
+}
+
+
 
 
